@@ -1,6 +1,6 @@
 # WorldPlanner
 
-idk, i wrote this when i was like 17 because i wanted to build stuff in Breaworlds without actually having to buy the blocks first lol. it’s basically a world editor that runs in your browser.
+idk, i wrote this when i was like 17 because i wanted to build stuff in Breaworlds without actually having to buy the blocks first lol. it’s basically a world editor that runs in your browser. The project actually contains all assets from back then 2024.
 
 everything is in one giant JS file because i didn’t care about “clean code” back then. if you’re looking for professional software architecture… this is not it goodluck.
 
