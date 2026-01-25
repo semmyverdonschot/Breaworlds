@@ -5,7 +5,7 @@ idk, i wrote this when i was like 17 because i wanted to build stuff in Breaworl
 everything is in one giant JS file because i didn’t care about “clean code” back then. if you’re looking for professional software architecture… this is not it goodluck.
 
 you can find a running example of WorldPlanner blazing fast, here:  
-https://bun.cytric.nl/WorldPlanner
+https://bun.cytric.nl/WorldPlanner/index.html
 
 ## what is this?
 WorldPlanner is a world planner for Breaworlds. you can:
