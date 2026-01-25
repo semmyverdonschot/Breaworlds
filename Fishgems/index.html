@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FishGem Calculator - Convert Fish to Gems & World Locks</title>
+    <meta name="description" content="Calculate your total Fish Gems and World Locks easily with the FishGem Calculator. Optimized for Breaworlds players!">
+    <meta name="keywords" content="FishGem, calculator, world locks, gems, Breaworlds, fish price">
+    <meta name="author" content="Cybrance">
+    
+    <meta property="og:title" content="FishGem Calculator - Convert Fish to Gems & World Locks">
+    <meta property="og:description" content="Easily calculate your total Fish Gems and World Locks. Essential for Breaworlds traders!">
+    <meta property="og:image" content="/images/Gem.webp">
+    <meta property="og:url" content="/fishgems">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FishGem Calculator - Convert Fish to Gems & World Locks">
+    <meta name="twitter:description" content="Use the FishGem Calculator to quickly determine your gems and world locks. A must-have tool for traders!">
+    <meta name="twitter:image" content="/images/Gem.webp">
+    
+    <link rel="icon" href="/images/favicon_io/favicon.ico" type="image/x-icon">
+    
+   
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #11111c;
+            color: #f8f8f8;
+            text-align: center;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0f0f19;
+        }
+
+        .logo {
+            height: 50px;
+            margin: 10px 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #00CC66;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+            margin: 10px 20px;
+        }
+
+        .btn:hover {
+            background-color: #00994D;
+            transform: scale(1.05);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 12px;
+            background: rgb(31, 32, 51);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+.rainbow-text {
+    font-weight: bold;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: rainbow-fade 14s linear infinite;
+}
+
+@keyframes rainbow-fade {
+    0% {
+        color: red;
+    }
+    14% {
+        color: orange;
+    }
+    28% {
+        color: yellow;
+    }
+    42% {
+        color: green;
+    }
+    57% {
+        color: blue;
+    }
+    71% {
+        color: indigo;
+    }
+    85% {
+        color: violet;
+    }
+    100% {
+        color: red;
+    }
+}
+
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+		p{
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+		}
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #555;
+            text-align: center;
+        }
+
+        th {
+            background-color: #222;
+            font-size: 1.2rem;
+        }
+
+        input {
+            width: 80px;
+            padding: 8px;
+            text-align: center;
+            background: #222;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 6px;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            font-size: 1rem;
+            color: #606d7b;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .logo {
+                height: 40px;
+                margin: 10px;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+                margin: 10px;
+            }
+
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .result {
+                font-size: 1.2rem;
+            }
+
+            table th, table td {
+                font-size: 1rem;
+                padding: 8px;
+            }
+
+            input {
+                width: 60px;
+                font-size: 1rem;
+                padding: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                height: 35px;
+                margin: 8px;
+            }
+
+            .btn {
+                font-size: 0.85rem;
+                padding: 6px 10px;
+                margin: 8px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .result {
+                font-size: 1rem;
+            }
+
+            table th, table td {
+                font-size: 0.9rem;
+                padding: 6px;
+            }
+
+            input {
+                width: 50px;
+                font-size: 0.9rem;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<script></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishGem Calculator - Convert Fish to Gems & World Locks</title>
+    <meta name="description" content="Calculate your total Fish Gems and World Locks easily with the FishGem Calculator. Optimized for Breaworlds players!">
+    <meta name="keywords" content="FishGem, calculator, world locks, gems, Breaworlds, Growtopia, fish price">
+    <meta name="author" content="Cybrance">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="https://cybrance.nl">
+            <img src="/images/Logo_cybrance_white-01.png" alt="Cybrance Logo" class="logo">
+        </a>
+        <a href="https://panel.cybrance.nl" class="btn">Client Panel</a>
+    </nav>
+    <div class="container">
+        <h2>Fishgem Calculator</h2>
+        <div class="result" id="result">
+            <img src="/images/Gem.webp" alt="Gem" style="width: 20px; height: 20px;">
+            <span id="gem-count">0</span>
+            <img src="/images/World_Lock.webp" alt="World Lock" style="width: 20px; height: 20px; margin-left: 20px;">
+            <span id="world-lock-count">0</span>
+        </div>
+        
+       
+        <table>
+            <tr>
+                <th>Fish</th>
+                <th>Each</th>
+                <th>Quantity</th>
+                <th>Gems</th>
+            </tr>
+            <tbody id="fishTable"></tbody>
+        </table>
+        <div>
+            <label>Gem Rate (Gems per WL): <input type="number" id="gemRate" value="0" oninput="calculate()"></label>
+        </div>
+        <div class="result" style="margin-top: 20px;"  id="totalResult">
+        </div>
+ <p class="credits">For the community, by <span class="rainbow-text">Blane</span></p>
+    </div>
+
+    <div class="footer" style="margin-bottom:20px;">
+        Cybrance &copy; 2024 - 2025. All rights reserved. 
+        <br>
+        Resources provided by 
+        <a href="https://breaworldsgame.com" target="_blank" style="color: #00CC66; text-decoration: none;">Breaworlds</a>
+    </div>
+
+    <script>
+
+
+    const fishTypes = [
+    { name: 'Salmon', gems: 150, img: '/images/Salmon.webp' },
+    { name: 'Carp', gems: 75, img: '/images/Carp.webp' },
+    { name: 'Goldfish', gems: 150, img: '/images/Goldfish.webp' },
+    { name: 'Trout', gems: 100, img: '/images/Trout.webp' },
+    { name: 'Catfish', gems: 100, img: '/images/Catfish.webp' },
+    { name: 'Shark', gems: 1000, img: '/images/Shark.webp' },
+    { name: 'Lovefish', gems: 500, img: '/images/Lovefish.webp' },
+    { name: 'Tuna', gems: 800, img: '/images/Tuna.webp' },
+    { name: 'Squid', gems: 600, img: '/images/Squid.webp' },
+    { name: 'Smokehouse', gems: 0, img: '/images/Smokehouse.webp', description: "Calculate ready fishgems!" }
+];
+
+
+const fishTable = document.getElementById('fishTable');
+for (const data of fishTypes) {
+    fishTable.innerHTML += `
+        <tr>
+            <td><img src="${data.img}" alt="${data.name}" width="60"></td>
+            <td>${data.description ? data.description : data.gems}</td>
+            <td><input type="number" id="${data.name}" value="0" oninput="calculate()"></td>
+            <td id="total_${data.name}">0</td>
+        </tr>
+    `;
+}
+
+function calculate() {
+    let totalGems = 0;
+    for (const data of fishTypes) {
+        let quantity = parseInt(document.getElementById(data.name).value) || 0;
+        let total = quantity * (data.gems || 1);
+        document.getElementById(`total_${data.name}`).innerText = total.toLocaleString('de-DE');
+        totalGems += total;
+    }
+
+    let gemRate = parseInt(document.getElementById('gemRate').value);
+    let worldLocksText = gemRate && gemRate > 0 ? `${(totalGems / gemRate).toFixed(0)}` : "Rate?";
+
+    const resultHTML = `
+        <img src="/images/Gem.webp" alt="Gems" style="height: 24px; vertical-align: middle;"> ${totalGems.toLocaleString('de-DE')}
+        <img src="/images/World_Lock.webp" alt="World Locks" style="height: 24px; margin-left: 20px; vertical-align: middle;"> ${worldLocksText}
+    `;
+    
+    document.getElementById('result').innerHTML = "Total: " + resultHTML;
+    document.getElementById('totalResult').innerHTML = "Total: " + resultHTML;
+}
+
+    </script>
+</body>
+</html>

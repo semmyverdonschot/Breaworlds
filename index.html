@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <title>World Planner BETA</title>
+  <link rel="stylesheet" href="style.css" />
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>World Planner BETA – Build and Collaborate on Breaworlds Maps</title>
+
+  <meta name="description" content="World Planner BETA is an interactive world-building tool for Breaworlds. Plan, build, save, and share your custom maps with ease using our zoomable grid and block placement features." />
+  <meta name="keywords" content="Breaworlds, world planner, map builder, world editor, game map design, block placement, world collaboration, pixel art map editor" />
+  <meta name="author" content="Player & Blane" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="World Planner BETA – Build and Collaborate on Breaworlds Maps" />
+  <meta property="og:description" content="Plan, build, and share your custom Breaworlds maps with our interactive world planner tool." />
+  <meta property="og:image" content="/Export_Sprites/Export_Sprites/spr_wrench_0.png" />
+  <meta property="og:url" content="/WorldPlanner/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="World Planner BETA – Build and Collaborate on Breaworlds Maps" />
+  <meta name="twitter:description" content="Plan, build, and share your custom Breaworlds maps with our interactive world planner tool." />
+  <meta name="twitter:image" content="/Export_Sprites/Export_Sprites/spr_wrench_0.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/Export_Sprites/Export_Sprites/spr_wrench_0.png" />
+</head>
+
+</head>
+<body>
+  <div id="navbar">
+    <div id="menu-toggle">☰</div>
+    <div id="logo">World Planner BETA V2.0  <i>Open menu for instructions.</i></div>
+  </div>
+
+  <div id="side-menu">
+    <label>Change World Background:</label>
+    <select id="background-select">
+      <option value="grid">Grid Background</option>
+    </select>
+
+    <label for="load-input" style="margin-top: 15px;">Load World:</label>
+    <input type="file" id="load-input" />
+    <label>Render Image to world:</label>
+
+    <input type="file" id="image-upload" accept="image/*" />
+
+<select id="tile-mode" style="margin-bottom: 20px" >
+ <option value="background">Backgrounds</option>
+<option value="plastic">Plastic Blocks</option>
+ <option value="color">Color Blocks</option>
+</select>
+<button class="button" id="render-image-button">Render</button>
+
+
+
+    <div id="instructions" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #666;">
+  <h3>Instructions</h3>
+  <ul>
+    <li><strong>Zoom: Click the canvas (grid)</strong> Hold <kbd>Ctrl</kbd> + scroll mouse wheel</li>
+    <li><strong>Place Blocks:</strong> Click a tile then click grid</li>
+    <li><strong>Erase Blocks:</strong> Select the seed (eraser) then select tile or right-click on grid to erase</li>
+    <li><strong>Save:</strong> You can save as PNG or world project (JSON)</li>
+    <li><strong>Load:</strong> Load saved world files here</li>
+  </ul>
+</div>
+
+<div id="collaboration" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #666;">
+  <h3>Collaboration</h3>
+  <p>You can export your world as a JSON project file to share your builds. Others can load the JSON to build with you!</p>
+</div>
+
+    <div style="margin-top: auto; text-align: center; padding-top: 20px;">
+      <div class="rainbow-text"> For the community by, Blane</div>
+    </div>
+  </div>
+
+  <div id="grid-container">
+    <div id="controls">
+      <button class="button" id="save-json-button">Save World File</button>
+      <button class="button" id="save-png-button">Save as PNG</button>
+      <button class="button" id="toggle-gridlines-button">Toggle Grid Lines</button>
+      <div id="block-count-list" style="margin-top: 10px; max-height: 300px; overflow-y: auto;"></div>
+
+    </div>
+    <div id="grid"></div>
+  </div>
+
+  <div id="bottom-bar">
+    <input type="text" id="search-input" placeholder="Search blocks..." />
+    <div id="tiles-scroll"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
