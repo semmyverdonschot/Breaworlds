@@ -18,7 +18,7 @@ WorldPlanner is a world planner for Breaworlds. you can:
 ## Fishgems Calculator
 Need to know the value of your fish in Breaworlds? The Fishgems Calculator helps you convert your fish to gems and World Locks. It's a handy tool for traders and players alike!
 You can access it directly by opening `Fishgems/index.html`.
-You can also find a running example here: https://bun.cytric.nl/Fishgems
+You can also find a running example here: https://bun.cytric.nl/Fishgems also its a bit outdated but its easily updateable, did you make a accurate version? you can message me on hello@semmyverdonschot.com and I will host it for free.
 
 ## how to run it
 literally just open `index.html`.  
