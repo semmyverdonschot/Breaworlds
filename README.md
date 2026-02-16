@@ -1,6 +1,6 @@
 # WorldPlanner
 
-idk, i wrote this when i was like 17 because i wanted to build stuff in Breaworlds without actually having to buy the blocks first lol. it’s basically a world editor that runs in your browser. The project actually contains all assets from back then 2024.
+i wrote this when i was like 17 because i wanted to build stuff in Breaworlds without actually having to buy the blocks first lol. it’s basically a world editor that runs in your browser. The project actually contains all assets from back then 2024.
 
 everything is in one giant JS file because i didn’t care about “clean code” back then. if you’re looking for professional software architecture… this is not it goodluck.
 
@@ -10,7 +10,7 @@ https://bun.cytric.nl/WorldPlanner/index.html
 ## what is this?
 WorldPlanner is a world planner for Breaworlds. you can:
 - place blocks on a 100x60 grid
-- render images directly into the world (no idea why i added this, but it’s cool)
+- render images directly into the world
 - save your builds as JSON files to share or load later
 - export your world as a PNG to show it off
 - zoom in/out and scroll around like a normal person
@@ -29,8 +29,3 @@ no npm install, no build steps, no server. just pure vanilla JS and some CSS.
 - **right click** to erase (or use the seed/eraser tool)  
 - **ctrl + scroll** to zoom  
 - the search bar at the bottom is actually pretty decent for finding blocks
-
-## why?
-because i i idk 
-
-peace.  
