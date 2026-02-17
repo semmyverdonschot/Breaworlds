@@ -536,20 +536,26 @@ async function loadBackgroundOptions() {
     const files = await res.json();
 
     const bgFiles = files
-      .filter((file) => file.startsWith("Export_Sprites/bg_"))
-      .filter((file) => !file.toLowerCase().includes("menu"));
+      .filter((file) => {
+        const fname = file.split("/").pop().toLowerCase();
+        return fname.startsWith("bg_");
+      });
 
     const total = bgFiles.length;
     let count = 0;
 
     for (const file of bgFiles) {
       const filename = file.split("/").pop();
-      const match = filename.match(/^bg_([a-zA-Z]+)_\d+/);
+      // Match bg_name_number.png, where name can contain underscores
+      const match = filename.match(/^bg_(.+)_(\d+)\.png$/i);
       if (!match) continue;
 
       const name = match[1];
-      const displayName =
-        name.charAt(0).toUpperCase() + name.slice(1) + " Background";
+      // Clean up the name for display: replace underscores with spaces and capitalize
+      const displayName = name.split('_')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ') + " Background";
+        
       const option = document.createElement("option");
       option.value = `/Export_Sprites/${file}`;
       option.textContent = displayName;
